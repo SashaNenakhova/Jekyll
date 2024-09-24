@@ -1,0 +1,15 @@
+---
+layout: page
+title: Features
+permalink: /features/
+---
+
+<ul>
+  {% for feature in site.features %}
+    <li>
+      <h2>{{ feature.name }}</h2>
+      <h4>{{ feature.date | date: "%-d %B %Y" }}</h4>
+      <p>{{ feature.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>
